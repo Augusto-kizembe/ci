@@ -103,10 +103,15 @@
           </a>
           </p>
         <?php endif; ?>
+        <p class="mb-0">
+          <a href="<?= base_url() ?>login" class="btn btn-primary">
+            <span><?= lang('menu_home') ?></span>
+          </a>
+          </p>
       </div>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item <?= ($this->uri->segment(1) == '')?'active':''?>"><a href="<?= base_url() ?>" class="nav-link pl-0">Principal</a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == '')?'active':''?>"><a href="<?= base_url() ?>" class="nav-link pl-0"><?= (lang('menu_home')) ?></a></li>
           <li class="nav-item <?= ($this->uri->segment(1) == 'sobre')?'active':''?>"><a href="<?= base_url() ?>sobre" class="nav-link">Sobre Nós</a></li>
           <li class="nav-item <?= ($this->uri->segment(1) == 'servicos')?'active':''?>"><a href="<?= base_url() ?>servicos" class="nav-link">Serviços</a></li>
           <li class="nav-item <?= ($this->uri->segment(1) == 'projectos')?'active':''?>"><a href="<?= base_url() ?>projectos" class="nav-link">Projetos</a></li>
@@ -117,7 +122,21 @@
               <li class="nav-item <?= ($this->uri->segment(1) == 'funcionarios')?'active':''?>"><a href="<?= base_url() ?>funcionarios" class="nav-link">Funcionários</a></li>
             <?php endif ?>
           <?php endif ?>
+          
         </ul>
       </div>
     </div>
   </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+

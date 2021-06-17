@@ -5,12 +5,14 @@ class SiteController extends CI_Controller
 {
     public function __construct(){
         parent::__construct();
+        $this->lang->load('frances', 'france');
         $this->load->model('ServicoModel');
         $this->load->model('RequestModel','request');
     }
 
     public function index()
     {
+        //var_dump($this->lang->line("titulo"));die();
         $this->load->view('includes/header');
         $this->load->view('site/home');
         $this->load->view('includes/footer');
