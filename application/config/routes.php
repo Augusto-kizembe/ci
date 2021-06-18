@@ -84,5 +84,8 @@ $route['alterar_senha']['get'] = 'LoginController/showChangePasswordForm';
 $route['alterar_senha']['post'] = 'LoginController/changePassword';
 $route['pdf']['get'] = 'PdfController/teste';
 
+// Router de Idioma 
+$route['idioma/(:any)'] = 'IdiomaController/idiomaCheng/$1';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

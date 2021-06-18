@@ -3,9 +3,9 @@
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
-        <h1 class="mb-2 bread">Fale-Conosco</h1>
-        <p class="breadcrumbs"><span class="mr-2"><a href="{{ url('/') }}">Principal <i
-                class="ion-ios-arrow-forward"></i></a></span> <span>Contacto <i
+        <h1 class="mb-2 bread"><?= ($this->session->userdata('idioma') != NULL)?lang('contacto_men'):" Fale-Conosco"; ?></h1>
+        <p class="breadcrumbs"><span class="mr-2"><a href="{{ url('/') }}"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_home'):" Principal"; ?> <i
+                class="ion-ios-arrow-forward"></i></a></span> <span><?= ($this->session->userdata('idioma') != NULL)?lang('menu_contacto'):" Contacto"; ?> <i
               class="ion-ios-arrow-forward"></i></span></p>
       </div>
     </div>
@@ -21,19 +21,19 @@
             <div class="icon">
               <span class="icon-map-o"></span>
             </div>
-            <p><span>Endereço:</span> Talatona Business Park</p>
+            <p><span><?= ($this->session->userdata('idioma') != NULL)?lang('contacto_end'):" Endereço"; ?>:</span> Talatona Business Park</p>
           </div>
           <div class="col-md-4 text-center border-height py-4">
             <div class="icon">
               <span class="icon-mobile-phone"></span>
             </div>
-            <p><span>Telefone:</span> <a href="tel://1234567920">(+244) 921625653 </a></p>
+            <p><span><?= ($this->session->userdata('idioma') != NULL)?lang('contacto_tel'):" Telefone"; ?>:</span> <a href="tel://1234567920">(+244) 921625653 </a></p>
           </div>
           <div class="col-md-4 text-center py-4">
             <div class="icon">
               <span class="icon-envelope-o"></span>
             </div>
-            <p><span>Email:</span> <a href="suport@eduiba.com">suport@eduiba.com</a></p>
+            <p><span>E-mail:</span> <a href="suport@eduiba.com">suport@eduiba.com</a></p>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
             </div>
     <div class="row block-9 justify-content-center mb-5">
       <div class="col-md-8 mb-md-5">
-        <h2 class="text-center">Conheça a Eduiba Projectos<br>Sobre questões envie-nos mensagens</h2>
+        <h2 class="text-center"><?= ($this->session->userdata('idioma') != NULL)?lang('contacto_titulo'):" Conheça a Eduiba Projectos<br>Sobre questões envie-nos mensagens"; ?>:</span></h2>
         <form action="<?= base_url() ?>contactos/email" method="POST" class="bg-light p-5 contact-form">
           <div class="form-group">
             <input type="text" name="nome" class="form-control" placeholder="Nome Completo">
@@ -64,7 +64,7 @@
             <textarea name="mensagem" id="" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
           </div>
           <div class="form-group">
-            <input type="submit" value="Enviar" class="btn btn-primary py-3 px-5">
+            <input type="submit" value="<?= ($this->session->userdata('idioma') != NULL)?lang('contacto_inout_btn'):" Enviar"; ?>" class="btn btn-primary py-3 px-5">
           </div>
         </form>
 

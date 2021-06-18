@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <h1 class="mb-2 bread">Serviços</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="<?= base_url() ?>">Principal <i
-                                class="ion-ios-arrow-forward"></i></a></span> <span>Serviços <i
+                <h1 class="mb-2 bread"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_servico'):" Serviços"; ?></h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="<?= base_url() ?>"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_home'):" Principal"; ?> <i
+                                class="ion-ios-arrow-forward"></i></a></span> <span><?= ($this->session->userdata('idioma') != NULL)?lang('menu_servico'):" Serviços"; ?> <i
                             class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
@@ -19,12 +19,12 @@
                 <div class="wrap-about-border ftco-animate">
                     <div class="img" style="background-image: url(images/about.jpg); border"></div>
                     <div class="text">
-                        <h3>Sobre a Solicitação dos Serviços </h3>
-                        <p>Fazer a Solicitação de um dos nossos serviços, é tam benefico e eficais em termo de seguranca
-                            e produtividade em espandir o seu negocio dentro ou fora da sua localizaçõa.</p>
-                        <p>representante do comandante na ponte, e responsável perante ele pelo exercício dos poderes
-                            que lhe tenham sido delegados. Em particular, é-lhe delegada a competência.</p>
-                        <p><a href="#" class="btn btn-primary py-3 px-4">Ver Mais <span
+                        <h3><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_baxo'):" Sobre a Solicitação dos Serviços "; ?></h3>
+                        <p><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_baxo_com1'):" Fazer a Solicitação de um dos nossos serviços, é tam benefico e eficais em termo de seguranca
+                            e produtividade em espandir o seu negocio dentro ou fora da sua localizaçõa."; ?></p>
+                        <p><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_baxo_com2'):" representante do comandante na ponte, e responsável perante ele pelo exercício dos poderes
+                            que lhe tenham sido delegados. Em particular, é-lhe delegada a competência."; ?></p>
+                        <p><a href="#" class="btn btn-primary py-3 px-4"><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_baxo_btn'):" Ver Mais"; ?> <span
                                     class="ion-ios-arrow-round-forward"></span></a></p>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
                 <?php endif ?>
             </div>
             <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
-                <h2 class="mb-4">Serviços em Vigor</h2>
-                <h3>Faça a diferença aderindo nossos serviços.</h3>
+                <h2 class="mb-4"><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_cima'):" Serviços em Vigor"; ?></h2>
+                <h3><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_cima_cont'):" Faça a diferença aderindo nossos serviços."; ?></h3>
                 <div class="row mt-5">
                     <?php foreach ($servicos as $servico): ?>
                         <?php if($servico->id == 1): ?>
@@ -78,9 +78,9 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section ftco-animate">
-                <h2 class="mb-4">Nossos Serviços</h2>
-                <p>Faça a sua Solicitação de um dos nossos serviços para que o seu negocio ou produto espande dentro e
-                    fora da sua comunidade. </p>
+                <h2 class="mb-4"><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_secund'):" Nossos Serviços"; ?></h2>
+                <p><?= ($this->session->userdata('idioma') != NULL)?lang('servico_titulo_secund_coment'):" Faça a sua Solicitação de um dos nossos serviços para que o seu negocio ou produto espande dentro e
+                    fora da sua comunidade."; ?> </p>
             </div>
         </div>
         <div class="row no-gutters">
@@ -93,7 +93,7 @@
                             <h3>Solicitação de <?= $servico->titulo ?></h3>
                             <p><?= $servico->descricao ?></p>
                             <p><a href="<?= base_url() ?>servicos/pedido/<?= $servico->id ?>"
-                                    class="btn btn-info py-3 px-4 btn-s">Solicitar</a>
+                                    class="btn btn-info py-3 px-4 btn-s"><?= ($this->session->userdata('idioma') != NULL)?lang('servico_btn'):" Solicitar"; ?></a>
                             </p>
                         </div>
                     </div>

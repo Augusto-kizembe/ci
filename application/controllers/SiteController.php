@@ -5,14 +5,25 @@ class SiteController extends CI_Controller
 {
     public function __construct(){
         parent::__construct();
-        $this->lang->load('frances', 'france');
+         
+        if($this->session->userdata('idioma')['designacao'] == "fs"){
+
+            $this->lang->load('frances', 'france');
+        }else if($this->session->userdata('idioma')['designacao'] == "pt"){
+            $this->session->unset_userdata('idioma');
+            
+        }else if($this->session->userdata('idioma')['designacao'] == "is"){
+            $this->lang->load('english', 'english'); 
+        }
+
+
         $this->load->model('ServicoModel');
         $this->load->model('RequestModel','request');
     }
 
     public function index()
     {
-        //var_dump($this->lang->line("titulo"));die();
+        //var_dump($this->session->userdata('idioma'));die();
         $this->load->view('includes/header');
         $this->load->view('site/home');
         $this->load->view('includes/footer');

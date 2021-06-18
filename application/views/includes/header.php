@@ -45,15 +45,15 @@
               <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span>
               </div>
               <div class="text">
-                <span>Email</span>
+                <span>E-mail</span>
                 <span>suport@eduiba.com</span>
               </div>
             </div>
             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
               <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
               <div class="text">
-                <span>Telefone</span>
-                <span>Ligue-nos: (+244) 921625653 / 995151782</span>
+                <span><?= ($this->session->userdata('idioma') != NULL)?lang('contacto_tel'):" Telefone"; ?></span>
+                <span><?= ($this->session->userdata('idioma') != NULL)?lang('contacto_men'):" Fale-Conosco"; ?>: (+244) 921625653 / 995151782</span>
               </div>
             </div>
 
@@ -80,12 +80,12 @@
 
             <ul class="dropdown-menu">
               <li><a href="#" style="color:white">
-                <a href="<?= base_url() ?>alterar_senha" class="dropdown-item"> <i class="fa fa-lock"></i> Alterar Senha</a>
+                <a href="<?= base_url() ?>alterar_senha" class="dropdown-item"> <i class="fa fa-lock"></i><?= ($this->session->userdata('idioma') != NULL)?lang('menu_alter_senha'):" Alterar Senha"; ?> </a>
               </li>
               <li>
                 <a href="#" onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();" class="dropdown-item">
-                  <i class="fa fa-sign-out-alt"></i> Sair
+                  <i class="fa fa-sign-out-alt"></i><?= ($this->session->userdata('idioma') != NULL)?lang('menu_sair'):" Sair"; ?>
                 </a>
 
                 <form id="logout-form" action="<?= base_url() ?>/logout" method="POST" style="display: none;">
@@ -99,27 +99,50 @@
         <?php else: ?>
           <p class="mb-0">
           <a href="<?= base_url() ?>login" class="btn btn-primary">
-            <span>Entrar</span>
+            <span><?= ($this->session->userdata('idioma') != NULL)?lang('menu_entrar'):"Entrar"; ?> </span>
           </a>
           </p>
         <?php endif; ?>
-        <p class="mb-0">
+        <div class="col-md col-md-5 dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button"
+                data-toggle="dropdown"><?= ($this->session->userdata('idioma') != NULL)?lang('idioma'):"Idioma"; ?>
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="" class="dropdown-item" onclick="idioma('is')">
+                        <i class="glyphicon glyphicon-print"></i><?= ($this->session->userdata('idioma') != NULL)?lang('idioma_ingles'):"Inglês"; ?> 
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item" onclick="idioma('fs')">
+                        <i class="glyphicon glyphicon-print"></i><?= ($this->session->userdata('idioma') != NULL)?lang('idioma_frances'):"Francês"; ?> 
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item" onclick="idioma('pt')">
+                        <i class="glyphicon glyphicon-print"></i><?= ($this->session->userdata('idioma') != NULL)?lang('idioma_portugues'):"Português"; ?> 
+                    </a>
+                </li>
+                 
+            </ul>
+        </div>
+        <!--<p class="mb-0">
           <a href="<?= base_url() ?>login" class="btn btn-primary">
-            <span><?= lang('menu_home') ?></span>
+            <span><?= lang('idioma') ?></span>
           </a>
-          </p>
+          </p> --->
       </div>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item <?= ($this->uri->segment(1) == '')?'active':''?>"><a href="<?= base_url() ?>" class="nav-link pl-0"><?= (lang('menu_home')) ?></a></li>
-          <li class="nav-item <?= ($this->uri->segment(1) == 'sobre')?'active':''?>"><a href="<?= base_url() ?>sobre" class="nav-link">Sobre Nós</a></li>
-          <li class="nav-item <?= ($this->uri->segment(1) == 'servicos')?'active':''?>"><a href="<?= base_url() ?>servicos" class="nav-link">Serviços</a></li>
-          <li class="nav-item <?= ($this->uri->segment(1) == 'projectos')?'active':''?>"><a href="<?= base_url() ?>projectos" class="nav-link">Projetos</a></li>
-          <li class="nav-item <?= ($this->uri->segment(1) == 'contactos')?'active':''?>"><a href="<?= base_url() ?>contactos" class="nav-link">Contacto</a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == '')?'active':''?>"><a href="<?= base_url() ?>" class="nav-link pl-0"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_home'):"Principal"; ?></a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == 'sobre')?'active':''?>"><a href="<?= base_url() ?>sobre" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_sobre'):"Sobre Nós"; ?></a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == 'servicos')?'active':''?>"><a href="<?= base_url() ?>servicos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_servico'):"Serviços"; ?></a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == 'projectos')?'active':''?>"><a href="<?= base_url() ?>projectos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_projecto'):"Projetos"; ?></a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == 'contactos')?'active':''?>"><a href="<?= base_url() ?>contactos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_contacto'):"Contacto"; ?></a></li>
           <?php if(isset($this->session->userdata()['eduiba'])): ?>
-            <li class="nav-item <?= ($this->uri->segment(1) == 'solicitacoes')?'active':''?>"><a href="<?= base_url() ?>solicitacoes" class="nav-link">Solicitações</a></li>
+            <li class="nav-item <?= ($this->uri->segment(1) == 'solicitacoes')?'active':''?>"><a href="<?= base_url() ?>solicitacoes" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_solicitacao'):"Solicitações"; ?></a></li>
             <?php if($this->session->userdata('eduiba')['isAdmin']): ?>
-              <li class="nav-item <?= ($this->uri->segment(1) == 'funcionarios')?'active':''?>"><a href="<?= base_url() ?>funcionarios" class="nav-link">Funcionários</a></li>
+              <li class="nav-item <?= ($this->uri->segment(1) == 'funcionarios')?'active':''?>"><a href="<?= base_url() ?>funcionarios" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_funcionario'):"Funcionários"; ?></a></li>
             <?php endif ?>
           <?php endif ?>
           

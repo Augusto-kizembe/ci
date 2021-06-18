@@ -6,7 +6,7 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>
               document.write(new Date().getFullYear());
-            </script> Todos direitos reservados </a>
+            </script> <?= ($this->session->userdata('idioma') != NULL)?lang('conteudo_footer'):" Todos direitos reservados "; ?></a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
         </div>
@@ -41,6 +41,8 @@
   <script src=" <?= base_url() ?>public/js/google-map.js"></script>
   <script src="<?= base_url() ?>public/js/main.js"></script>
   <script src="<?= base_url() ?>public/js/datatables.min.js"></script>
+  <script src="<?= base_url() ?>public/js/helper.js"></script>
+  <script type="text/javascript">var base_url = '<?= base_url() ?>';</script>
 <script>
     $(function() {
         $("#atender").click(function(){

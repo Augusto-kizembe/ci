@@ -2,12 +2,13 @@
     $lang['titulo'] = 'Bonjour';
     $lang['menu_home'] = 'Principale';
     $lang['menu_sobre'] = 'À propos de nous';
-    $lang['menu_servico'] = 'service';
+    $lang['menu_servico'] = 'Service';
     $lang['menu_projecto'] = 'Projets';
     $lang['menu_contacto'] = 'Contacter';
     $lang['menu_solicitacao'] = 'Demandes';
     $lang['menu_funcionario'] = 'Des employés';
     $lang['menu_entrar'] = 'Entrer';
+    $lang['menu_sair'] = 'Sortir';
     $lang['menu_alter_senha'] = 'Changer le mot de passe';
     $lang['conteudo_bemvido'] = 'Bienvenue aux projets Eduiba';
     $lang['conteudo_principal'] = 'Nous sommes la meilleure solution pour parier';
@@ -31,7 +32,7 @@
     mais aussi, toute l´expérience accumulée par une équipe de managers et de consultants d´affaires tout au long du
     10 dernières années';
     $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Être reconnu pour notre compétence professionnelle et notre contribution décisive au succès de notre
+    $lang['sobre_visao_cote'] = 'Être reconnu pour notre compétence professionnelle et notre contribution décisive au succès de notre
     clients et partenaires' ;
     $lang['sobre_valor'] = 'Valeurs';
     $lang['sobre_valor_cot1'] = 'Ethique, confidentialité, objectivité, réussite client, excellence et responsabilité, bon relationnel, réseau,
@@ -59,21 +60,27 @@
     et la productivité dans l´expansion de votre entreprise à l´intérieur ou à l´extérieur de votre emplacement';
     $lang['servico_titulo_baxo_com2'] = 'représentant du chef de pont, et responsable devant lui de l´exercice des pouvoirs
     qui lui ont été délégués. En particulier, il lui est délégué la compétence';
-    $lang['servico_titulo_baxo_btn'] = 'Voir plus';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
-    $lang['sobre_visao'] = 'Vue';
+    $lang['servico_titulo_cima'] = 'Services actuels';
+    $lang['servico_titulo_cima_cont'] = 'Faites la différence en vous joignant à nos services.';
+    $lang['servico_titulo_secund'] = 'Nos services';
+    $lang['servico_titulo_secund_coment'] = 'Faites votre demande pour l´un de nos services afin que votre entreprise ou votre produit se développe et
+    en dehors de votre communauté.';
+    $lang['servico_btn'] = 'demander';
+    $lang['projecto_titulo'] = 'Découvrez nos principaux projets';
+    $lang['contacto_men'] = 'Contactez-nous';
+    $lang['contacto_end'] = 'Adresse';
+    $lang['contacto_tel'] = 'Téléphone';
+    $lang['contacto_titulo'] = 'Rencontrez Eduiba Projectos<br>À propos des questions envoyez-nous des messages';
+    $lang['contacto_inout_btn'] = 'Soumettre';
+    
+    $lang['solicitacao_glob'] = 'À propos de la demande';
+    $lang['solicitacao_glob_sol'] = 'Demander'; 
+    $lang['servico_titulo_baxo_btn'] = 'Voir plus'; 
+
+    
+    // Idiomas
+    $lang['idioma'] = 'Langue';
+    $lang['idioma_frances'] = 'français';
+    $lang['idioma_ingles'] = 'Anglais';
+    $lang['idioma_portugues'] = 'Portugais';
 ?>
