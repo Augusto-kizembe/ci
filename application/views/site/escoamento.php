@@ -47,28 +47,28 @@
         <form action="<?= base_url()?>solicitacao/escoamento" method="POST" class="bg-light p-5 contact-form">
           <input type="hidden" name="servico_id" class="form-control" value="<?= $servico->id ?>">
           <div class="form-group">
-            <input type="text" name="nome_cliente" class="form-control" placeholder="Nome do Cliente" value="<?=set_value('nome_cliente')?>">
+            <input type="text" name="nome_cliente" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formCli'):" Informa do Cliente"; ?>" value="<?=set_value('nome_cliente')?>">
           </div>
           <div class="form-group">
-            <input type="number" name="telefone" class="form-control" required placeholder="Telefone Nº" value="<?=set_value('telefone')?>">
+            <input type="number" name="telefone" class="form-control" required placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formTel'):" Telefone Nº"; ?>" value="<?=set_value('telefone')?>">
           </div>
           <div class="form-group">
-            <input type="email" name="email" class="form-control" required placeholder="Email" value="<?=set_value('email')?>">
+            <input type="email" name="email" class="form-control" required placeholder="E-mail" value="<?=set_value('email')?>">
           </div>
           <div class="form-group">
-            <input type="text" name="produto" class="form-control" placeholder="Informa o Produto" value="<?=set_value('produto')?>">
+            <input type="text" name="produto" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formTel'):" Telefone Nº"; ?>" value="<?=set_value('produto')?>">
           </div>
           <div class="form-group">
-            <input type="number" name="qtd_produto" class="form-control" placeholder="Informa a Quantidade" value="<?=set_value('qtd_produto')?>">
+            <input type="number" name="qtd_produto" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_esc_formPais'):" Preço por unidade"; ?>" value="<?=set_value('qtd_produto')?>">
           </div>
           <div class="form-group">
-            <input type="number" name="preco" class="form-control" placeholder="Preço por unidade" value="<?=set_value('preco')?>">
+            <input type="number" name="preco" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_esc_formPais'):" Preço por unidade"; ?>" value="<?=set_value('preco')?>">
           </div>
           <div class="form-group">
-            <input type="text" name="localizacao" class="form-control" placeholder="Informa a Localização" value="<?=set_value('localizacao')?>">
+            <input type="text" name="localizacao" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_esc_formLoc'):" Informa a Localização"; ?>" value="<?=set_value('localizacao')?>">
           </div>
           <div class="form-group">
-            <input type="text" name="fazenda_empresa" class="form-control" placeholder="Empresa ou Fazenda" value="<?=set_value('fazenda_empresa')?>">
+            <input type="text" name="fazenda_empresa" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_esc_formEmp'):" Empresa ou Fazenda"; ?>" value="<?=set_value('fazenda_empresa')?>">
           </div>
 
           <div class="form-group">

@@ -76,6 +76,20 @@
     $lang['solicitacao_glob'] = 'About the request';
     $lang['solicitacao_glob_sol'] = 'Request'; 
     $lang['servico_titulo_baxo_btn'] = 'See more'; 
+    
+    //formularios
+    $lang['serv_formQtd'] = 'Inform the Quantity'; 
+    $lang['serv_formCli'] = 'Customer Information';
+    $lang['serv_formProd'] = 'Inform the Product';
+    $lang['serv_formTel'] = 'Telephone Nº';
+    $lang['serv_formPais'] = 'Country';
+
+    $lang['serv_esc_formPais'] = 'Price per unit'; 
+    $lang['serv_esc_formLoc'] = 'Inform the Location'; 
+    $lang['serv_esc_formEmp'] = 'Company or Farm';
+
+    $lang['serv_cons_formNeg'] = 'Business Type';
+    $lang['serv_cons_formObj'] = 'objective';  
 
     
     // Idiomas

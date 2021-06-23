@@ -78,6 +78,22 @@
     $lang['servico_titulo_baxo_btn'] = 'Voir plus'; 
 
     
+    //formularios
+    $lang['serv_formQtd'] = 'Informer la quantité';  
+    $lang['serv_formCli'] = 'Informations client';
+    $lang['serv_formProd'] = 'Informer le produit'; 
+    $lang['serv_formTel'] = 'Téléphone Nº'; 
+    $lang['serv_formPais'] = 'Pays'; 
+
+    $lang['serv_esc_formPais'] = 'Prix ​​par unité'; 
+    $lang['serv_esc_formLoc'] = 'Informer l´emplacement'; 
+    $lang['serv_esc_formEmp'] = 'Entreprise ou Ferme'; 
+
+    $lang['serv_cons_formNeg'] = 'Type d´entreprise'; 
+    $lang['serv_cons_formObj'] = 'objectif'; 
+
+    
+
     // Idiomas
     $lang['idioma'] = 'Langue';
     $lang['idioma_frances'] = 'français';

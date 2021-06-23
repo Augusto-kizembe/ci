@@ -47,16 +47,16 @@
         <form action="<?= base_url()?>solicitacao/exportacao" method="POST" class="bg-light p-5 contact-form">
           <input type="hidden" name="servico_id" class="form-control" value="<?= $servico->id ?>">
           <div class="form-group">
-            <input type="text" name="nome_cliente" class="form-control" placeholder="Nome do Cliente" value="<?=set_value('nome_cliente')?>">
+            <input type="text" name="nome_cliente" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formCli'):" Informa do Cliente"; ?>" value="<?=set_value('nome_cliente')?>">
           </div>
           <div class="form-group">
-            <input type="number" name="telefone" class="form-control" required placeholder="Telefone Nº" value="<?=set_value('telefone')?>">
+            <input type="number" name="telefone" class="form-control" required placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formTel'):" Telefone Nº"; ?>" value="<?=set_value('telefone')?>">
           </div>
           <div class="form-group">
-            <input type="email" name="email" class="form-control" required placeholder="Email" value="<?=set_value('email')?>">
+            <input type="email" name="email" class="form-control" required placeholder="E-mail" value="<?=set_value('email')?>">
           </div>
           <div class="form-group">
-            <label for="">Pais</label>
+            <label for=""><?= ($this->session->userdata('idioma') != NULL)?lang('serv_formPais'):" Pais"; ?></label>
             <select name="pais" class="form-control"  value="<?=set_value('pais')?>">
               <option value="Angola">Angola</option>
               <option value="França">França</option>
@@ -65,10 +65,10 @@
             </select>
           </div>
           <div class="form-group">
-            <input type="text" name="produto" class="form-control" placeholder="Informa o Produto" value="<?=set_value('produto')?>">
+            <input type="text" name="produto" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formProd'):" Informa o Produto"; ?>" value="<?=set_value('produto')?>">
           </div>
           <div class="form-group">
-            <input type="number" name="qtd_produto" class="form-control" placeholder="Informa a Quantidade" value="<?=set_value('qtd_produto')?>">
+            <input type="number" name="qtd_produto" class="form-control" placeholder="<?= ($this->session->userdata('idioma') != NULL)?lang('serv_formQtd'):" Informa a Quantidade"; ?>" value="<?=set_value('qtd_produto')?>">
           </div>
 
           <div class="form-group">
