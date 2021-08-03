@@ -14,7 +14,9 @@ class EmailController extends CI_Controller
         $this->email->from('suport@eduiba.com', 'Suport Eduiba');
         $this->email->to($this->input->post('email')); 
         $this->email->subject($this->input->post('assunto'));
-        $this->email->message($msg);  
+        $this->email->message($msg); 
+        //var_dump($this->email);die();
+
         if($this->email->send()){
             $this->session->set_flashdata([
                 'message' => 'Obrigado por nos contactar! Entraremos em contacto brevemente',
@@ -22,12 +24,13 @@ class EmailController extends CI_Controller
             ]);
             redirect('contactos');
         }else{
+            print($this->email->print_debugger());
             $this->session->set_flashdata([
                 'message' => 'Estamos com alguns problemas! Entraremos em contacto brevemente',
                 'type' => 'error'
             ]);
             redirect('contactos');
-        }
+        } 
     }
 
     function teste(){
