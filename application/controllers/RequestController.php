@@ -5,15 +5,16 @@ class RequestController extends CI_Controller
 {
     public function __construct(){
         parent::__construct();
+        if(isset($this->session->userdata('idioma')['designacao'])){
+            if($this->session->userdata('idioma')['designacao'] == "fs"){
 
-        if($this->session->userdata('idioma')['designacao'] == "fs"){
-
-            $this->lang->load('frances', 'france');
-        }else if($this->session->userdata('idioma')['designacao'] == "pt"){
-            $this->session->unset_userdata('idioma');
-        
-        }else if($this->session->userdata('idioma')['designacao'] == "is"){
-            $this->lang->load('english', 'english'); 
+                $this->lang->load('frances', 'france');
+            }else if($this->session->userdata('idioma')['designacao'] == "pt"){
+                $this->session->unset_userdata('idioma');
+            
+            }else if($this->session->userdata('idioma')['designacao'] == "is"){
+                $this->lang->load('english', 'english'); 
+            }
         }
 
         $this->load->model('ServicoModel');
@@ -256,7 +257,7 @@ class RequestController extends CI_Controller
 
     public function visualizar($solicitacao_id){
         $dado['solicitacao'] =  $this->request->solicitacao($solicitacao_id);
-       
+        
         if(count($dado) == 0){
             return $this->solicitacoes(2);
         }

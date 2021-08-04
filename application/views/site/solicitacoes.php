@@ -159,7 +159,7 @@
                                 <?php if($solicitacao['estado'] == 1){ ?>
                                 <td>Em Atendimento</td>
                                 <td>                                             
-                                    <a href="<?= base_url() ?>solicitacao/visualizar/<?= $solicitacao['solicitacao_id'] ?>/<?= $solicitacao['solicitacao_id'] ?>" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                                    <a href="<?= base_url() ?>solicitacao/visualizar/<?= $solicitacao['solicitacao_id'] ?>" class="btn btn-info"><i class="fa fa-eye"></i></a>
                                     <a href="<?= base_url() ?>solicitacao/estado/<?= $solicitacao['solicitacao_id'] ?>" class="btn btn-success"><i class="fa fa-thumbs-up"></i></a>
                                     <a href="<?= base_url() ?>solicitacao/estado/<?= $solicitacao['solicitacao_id'] ?>" class="btn btn-danger"><i class="fa fa-thumbs-down"></i></a>
                                 </td>
@@ -247,6 +247,31 @@
 
 <!-- sample modal content -->
 <div id="processo-atendimento" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Atendimento</h4>
+                <button type="button" class="close text-danger" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="<?= base_url() ?>solicitacao/estado">
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Descrição da Solicitação</label>
+                        <textarea name="objectivo" id="texto" cols="30" rows="7" class="form-control" placeholder="Descrição" value=""></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success waves-effect waves-light">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- sample modal Visualizar Solicitacao -->
+<div id="visualizar-solicitacao" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">

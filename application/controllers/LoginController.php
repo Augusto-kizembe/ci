@@ -5,14 +5,16 @@ class LoginController extends CI_Controller
 {
     public function __construct(){
         parent::__construct();
-        if($this->session->userdata('idioma')['designacao'] == "fs"){
+        if(isset($this->session->userdata('idioma')['designacao'])){
+            if($this->session->userdata('idioma')['designacao'] == "fs"){
 
-            $this->lang->load('frances', 'france');
-        }else if($this->session->userdata('idioma')['designacao'] == "pt"){
-            $this->session->unset_userdata('idioma');
-        
-        }else if($this->session->userdata('idioma')['designacao'] == "is"){
-            $this->lang->load('english', 'english'); 
+                $this->lang->load('frances', 'france');
+            }else if($this->session->userdata('idioma')['designacao'] == "pt"){
+                $this->session->unset_userdata('idioma');
+            
+            }else if($this->session->userdata('idioma')['designacao'] == "is"){
+                $this->lang->load('english', 'english'); 
+            }
         }
 
         $this->load->model('UserModel','user');
