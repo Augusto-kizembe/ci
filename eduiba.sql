@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 17-Jun-2021 às 08:12
--- Versão do servidor: 5.7.24
--- versão do PHP: 7.2.19
+-- Tempo de geração: 04-Ago-2021 às 14:21
+-- Versão do servidor: 10.2.39-MariaDB
+-- versão do PHP: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `eduiba`
+-- Banco de dados: `eduibaco_eduiba`
 --
 
 -- --------------------------------------------------------
@@ -164,8 +165,8 @@ INSERT INTO `requests` (`id`, `service_id`, `client_id`, `user_id`, `pais`, `tip
 (9, 1, 3, 8, 'Angola', 'Saúde', 'Bmmdmddm dmdmd', NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
 (10, 1, 3, 8, 'Angola', 'Inteligência', 'Jjsksks', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (11, 1, 3, 8, 'Angola', 'gGGGGGGG', 'hgjkhj', NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
-(12, 1, 3, 8, 'Angola', 'TITGGTRGH', 'DRYTE45Y5E4YERYTRYU57U45 5YT5Y45Y453', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
-(13, 1, 3, 8, 'Angola', 'Inteligência', 'sdgrgtrtyjkyitkghkghklvhmkvggbg  htrhjtrjutr', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
+(12, 1, 3, 8, 'Angola', 'TITGGTRGH', 'DRYTE45Y5E4YERYTRYU57U45 5YT5Y45Y453', NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
+(13, 1, 3, 8, 'Angola', 'Inteligência', 'sdgrgtrtyjkyitkghkghklvhmkvggbg  htrhjtrjutr', NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
 (14, 1, 3, 8, 'Angola', 'Inteligência', 'c vgnhgfnjghmghmg', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
 (15, 1, 3, 8, 'Angola', 'Inteligência', 'E45TYER', NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL),
 (16, 1, 6, 8, 'Angola', 'TITGGTRGH', 'yugyigyugyuigigugyugjy', NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL),
@@ -221,7 +222,9 @@ INSERT INTO `services` (`id`, `titulo`, `descricao`, `created_at`, `updated_at`)
 (1, 'Consultoria', 'A Consultoria representante do comandante na ponte', '2020-08-21 20:31:12', '2020-08-21 20:31:12'),
 (2, 'Exportação', 'A Exportação poderes que lhe tenham sido delegados', '2020-08-21 20:31:12', '2020-08-21 20:31:12'),
 (3, 'Importação', 'A Importação tem sido delegados. Em particular, é-lhe delegada a', '2020-08-21 20:31:12', '2020-08-21 20:31:12'),
-(4, 'Escoamento', 'O Escoamento é tido como perante ele pelo exercício dos poderes sido delegados.', '2020-08-21 20:31:12', '2020-08-21 20:31:12');
+(4, 'Escoamento de produtos Nacionais', 'O Escoamento é tido como perante ele pelo exercício dos poderes sido delegados.', '2020-08-21 20:31:12', '2020-08-21 20:31:12'),
+(5, 'Licenciamento de Importações', 'Tratamos do licenciamento de todos tipos de importações, bens e produtos aufandegarios', '2021-08-02 16:39:07', '2021-08-01 16:39:07'),
+(6, 'Transporte & logística.', 'Planear e controlar os sistemas de transporte e distribuição; gerir as atividades logísticas de carga, armazenagem e transporte; conceber e propor novas ', '2021-08-02 16:41:25', '2021-08-02 16:41:25');
 
 -- --------------------------------------------------------
 
@@ -235,8 +238,8 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `online` tinyint(1) NOT NULL DEFAULT '1',
-  `isactivo` tinyint(1) NOT NULL DEFAULT '0',
+  `online` tinyint(1) NOT NULL DEFAULT 1,
+  `isactivo` tinyint(1) NOT NULL DEFAULT 0,
   `isadmin` tinyint(1) NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -385,7 +388,7 @@ ALTER TABLE `role_user`
 -- AUTO_INCREMENT de tabela `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `users`
