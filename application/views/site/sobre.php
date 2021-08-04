@@ -35,19 +35,18 @@
       <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
         <h2 class="mb-4"><?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo'):" Eduiba Projeto"; ?></h2>
         <p>
-          <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo_cont1'):" A Eduiba Projeto é uma empresa séria na organização e desenvolvimento de projectos multifaceticos, provendo e
-          realizando inspirações, ideias, projectos e torna-los prontos para o desenvolvimento sustentavel das
-          organizações, grupos comerciais e particulares."; ?>
+          <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo_cont1'):"EDUIBA PROJETOS LDA - Somos uma empresa de prestação de serviços nas áreas de Consultoria Industrial, Importações e Exportações, Distribuição e logística da produção nacional."; ?>
         </p>
         <p>
-          <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo_cont2'):"Somos uma empresa focada no desenvolvimento organizacional e gestão de projetos diversos, que atua no país
-          inteiro atendendo a clientes dos mais diversos portes e atividades."; ?>
+          <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo_cont2'):"Actuando a mais de 10 anos em Angola, a empresa EDUIBA PROJETOS é líder na distribuição de bens e produtos operando nas 18 províncias de Angola, com mais de 100 parceiros em todo país."; ?>
         </p>
         <p>
-          <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo_cont3'):" Sediada em Angola na capital Luanda, tem atuado junto às organizações, levando tecnologia modernas de gestão,
-          mas também, toda a experiência acumulada por uma equipa de gestores e consultores de negócios ao longo dos
-          últimos 10 anos."; ?>
+          <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_titulo_cont3'):"Conectar a tua empresa, ou o seu negócio a nossa plataforma é fazer parte de um núcleo de pequenas, médias e grandes empresas em diferentes ramos de actividade profissional e empresarial."; ?>
         </p>
+        <p>Estamos localizados em Angola na capital de Luanda, bairro miramar.<br>
+
+EDUIBA PROJETOS LDA
+</p>
         <h2 class="mb-4"><?= ($this->session->userdata('idioma') != NULL)?lang('sobre_visao'):" Visão"; ?></h2>
         <p>
           <?= ($this->session->userdata('idioma') != NULL)?lang('sobre_visao_cote'):" Sermos reconhecidos pela competência profissional e pela decisiva contribuição para o sucesso dos nossos
