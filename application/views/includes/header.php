@@ -136,8 +136,8 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <?= ($this->uri->segment(1) == '')?'active':''?>"><a href="<?= base_url() ?>" class="nav-link pl-0"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_home'):"Principal"; ?></a></li>
           <li class="nav-item <?= ($this->uri->segment(1) == 'sobre')?'active':''?>"><a href="<?= base_url() ?>sobre" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_sobre'):"Sobre Nós"; ?></a></li>
-          <li class="nav-item <?= ($this->uri->segment(1) == 'servicos')?'active':''?>"><a href="<?= base_url() ?>servicos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_servico'):"Serviços"; ?></a></li>
-          <li class="nav-item <?= ($this->uri->segment(1) == 'projectos')?'active':''?>"><a href="<?= base_url() ?>projectos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_projecto'):"Projetos"; ?></a></li>
+          <li class="nav-item <?= ($this->uri->segment(1) == 'servicos')?'active':''?>"><a href="<?= base_url() ?>servicos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_servico'):"Serviços"; ?></a></li><!-- 
+          <li class="nav-item <?= ($this->uri->segment(1) == 'projectos')?'active':''?>"><a href="<?= base_url() ?>projectos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_projecto'):"Projetos"; ?></a></li> -->
           <li class="nav-item <?= ($this->uri->segment(1) == 'contactos')?'active':''?>"><a href="<?= base_url() ?>contactos" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_contacto'):"Contacto"; ?></a></li>
           <?php if(isset($this->session->userdata()['eduiba'])): ?>
             <li class="nav-item <?= ($this->uri->segment(1) == 'solicitacoes')?'active':''?>"><a href="<?= base_url() ?>solicitacoes" class="nav-link"><?= ($this->session->userdata('idioma') != NULL)?lang('menu_solicitacao'):"Solicitações"; ?></a></li>
